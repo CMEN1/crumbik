@@ -14,11 +14,10 @@
 		      <ul id="nav-sesion" class="hide-on-med-and-down">
                 <% if user_signed_in? %>
 
-                     <li><%=  link_to "Cerrar Sesion" , destroy_user_session_path, method: :delete, class: "grey-text" %></li>
+                     <li><%=  link_to "Cerrar Sesion" , destroy_user_session_path, method: :delete, class: "blue-text" %></li>
                 <%  else %>
-		        <li><%=  link_to "Iniciar Sesion", new_user_
-                         session_path, class: "grey-text" %></li>
-		        <li> <%= link_to "Registrarse" , new_user_registration_path(@user) , class: "grey-text"%></li>
+		        <li><%=  link_to "Iniciar Sesion", new_user_session_path, class: "blue-text" %></li>
+		        <li> <%= link_to "Registrarse" , new_user_registration_path(@user) , class: "blue-text" %></li>
                     <%  end %>
 
 
