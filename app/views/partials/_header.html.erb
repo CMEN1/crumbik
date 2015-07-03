@@ -6,7 +6,7 @@
     			<img src="<%= asset_path 'logo.png' %>"><span id="logo-text">CR&Uuml;MBIK</span>
     		</a>
 		      <ul id="nav-mobile" class="right hide-on-med-and-down">
-		        <li><a href="sass.html" class="grey-text">Inicio</a></li>
+		        <li><%=  link_to "Inicio", root_path, class: "grey-text" %></li>
 		        <li><a href="components.html" class="grey-text">Servicios</a></li>
 		        <li><a href="javascript.html" class="grey-text">Planes</a></li>
 		        <li><a href="components.html" class="grey-text">Cont&aacute;ctanos</a></li>
@@ -16,8 +16,8 @@
 
                      <li><%=  link_to "Cerrar Sesion" , destroy_user_session_path, method: :delete, class: "blue-text" %></li>
                 <%  else %>
-		        <li><%=  link_to "Iniciar Sesion", new_user_session_path, class: "blue-text" %></li>
-		        <li> <%= link_to "Registrarse" , new_user_registration_path(@user) , class: "blue-text" %></li>
+		        <li><%=  link_to "Iniciar Sesion", new_user_session_path, class: "grey-text" %></li>
+		        <li> <%= link_to "Registrarse" , new_user_registration_path(@user) , class: "grey-text" %></li>
                     <%  end %>
 
 
