@@ -21,9 +21,11 @@
 
   <div class="actions row">
     <%= f.submit "Iniciar Sesion" , class: 'waves-effect waves-light btn col s2' %>
-    
+
   </div>
 <% end %>
 <%= render "devise/shared/links" %>
+<%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %>
+
 
 </div>
